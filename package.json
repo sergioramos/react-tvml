@@ -1,6 +1,6 @@
 {
   "name": "react-tvml",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "BSD",
   "description": "react bindings to Apple's TVJS & TVML",
   "author": "Sérgio Ramos <mail@sergioramos.me>",
@@ -23,5 +23,8 @@
     "fbjs": "^0.2.1",
     "has-own-prop": "^1.0.0",
     "react": "^0.14.0-rc1"
+  },
+  "devDependencies": {
+    "imports-loader": "^0.6.4"
   }
 }

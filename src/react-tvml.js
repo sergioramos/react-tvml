@@ -1,3 +1,7 @@
+try {
+  require('imports?this=>global!./globals.js');
+} catch (err) {}
+
 var Injection = require('react/lib/ReactInjection');
 var EventPluginRegistry = require('react/lib/EventPluginRegistry');
 var ComponentEnvironment = require('react/lib/ReactComponentEnvironment');
