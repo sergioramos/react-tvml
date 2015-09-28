@@ -1,7 +1,27 @@
 {
   "name": "react-tvml",
-  "version": "1.0.0",
-  "description": "wip",
-  "main": "index.js",
-  "license": "MIT"
+  "version": "1.0.1",
+  "license": "BSD",
+  "description": "react bindings to Apple's TVJS & TVML",
+  "author": "Sérgio Ramos <mail@sergioramos.me>",
+  "main": "src/react-tvml.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramitos/react-tvml"
+  },
+  "bugs": {
+    "url": "https://github.com/ramitos/react-tvml/issues"
+  },
+  "keywords": [
+    "react",
+    "tvjs",
+    "tvml",
+    "tvos",
+    "apple"
+  ],
+  "dependencies": {
+    "fbjs": "^0.2.1",
+    "has-own-prop": "^1.0.0",
+    "react": "^0.14.0-rc1"
+  }
 }
