@@ -20,7 +20,7 @@
     "apple"
   ],
   "dependencies": {
-    "fbjs": "0.2.1",
+    "fbjs": "0.3.0",
     "has-own-prop": "1.0.0",
     "react": "^0.14.0-rc1"
   },
