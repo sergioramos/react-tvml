@@ -25,6 +25,6 @@
     "react": "^0.14.0-rc1"
   },
   "devDependencies": {
-    "imports-loader": "0.6.4"
+    "imports-loader": "0.6.5"
   }
 }
