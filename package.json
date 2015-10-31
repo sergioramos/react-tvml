@@ -1,6 +1,6 @@
 {
   "name": "react-tvml",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "BSD",
   "description": "react bindings to Apple's TVJS & TVML",
   "author": "Sérgio Ramos <mail@sergioramos.me>",
