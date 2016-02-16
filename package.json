@@ -22,7 +22,7 @@
   "dependencies": {
     "fbjs": "0.7.0",
     "has-own-prop": "1.0.0",
-    "lodash.clone": "^3.0.3",
+    "lodash.clone": "^4.1.1",
     "react": "^0.14.6"
   },
   "devDependencies": {
