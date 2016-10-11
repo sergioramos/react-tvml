@@ -4,6 +4,7 @@ var DOMChildrenOperations = require('react/lib/DOMChildrenOperations');
 var DOMPropertyOperations = require('react/lib/DOMPropertyOperations');
 var ReactPerf = require('react/lib/ReactPerf');
 var Mount = require('./Mount');
+var Danger = require('./Danger');
 
 var invariant = require('fbjs/lib/invariant');
 
@@ -33,10 +34,12 @@ var ReactTVMLIDOperations = {
    * @internal
    */
   processChildrenUpdates: function(updates, markup) {
+    var markupString = Danger.dangerouslyRenderMarkup(markup);
+
     DOMChildrenOperations.processUpdates(updates.map(function(update) {
       update.parentNode = Mount.getNode(update.parentID);
       return update;
-    }), markup);
+    }), markupString);
   },
 
   /**
