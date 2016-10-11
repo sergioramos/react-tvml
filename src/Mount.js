@@ -437,7 +437,12 @@ var TVMLMount = {
   _instancesByReactRootID: instancesByReactRootID,
 
   generateEmptyContainer: function () {
-    return parser.parseFromString('<document></document>', 'text/xml');
+    var doc = parser.parseFromString('<document></document>', 'text/xml');
+
+    // reset the global document on every new page render
+    if (global.document) global.document = doc;
+
+    return doc;
   },
 
   /**
