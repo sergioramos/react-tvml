@@ -1,31 +1,99 @@
 {
   "name": "react-tvml",
   "version": "1.0.4",
-  "license": "BSD",
-  "description": "react bindings to Apple's TVJS & TVML",
-  "author": "Sérgio Ramos <mail@sergioramos.me>",
-  "main": "src/react-tvml.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ramitos/react-tvml"
-  },
-  "bugs": {
-    "url": "https://github.com/ramitos/react-tvml/issues"
-  },
+  "license": "BSD-3-Clause",
+  "description": "React bindings to Apple's TVMLKit",
+  "repository": "sergioramos/react-tvml",
   "keywords": [
     "react",
-    "tvjs",
+    "apple",
+    "tv",
+    "apple-tv",
     "tvml",
-    "tvos",
-    "apple"
+    "tvmlkit",
+    "tvml-kit",
+    "tvos"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com",
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "source": "index.js",
+  "main": "dist/react-tvml.js",
+  "umd:main": "dist/react-tvml.umd.js",
+  "module": "dist/react-tvml.esm.js",
+  "esmodule": "dist/react-tvml.modern.js",
+  "scripts": {
+    "build": "bin-up microbundle build --no-compress --jsx React.createElement",
+    "fmt": "prettier --config package.json --write '**/*'",
+    "eslint": "eslint . --ext .js --ext .ts",
+    "test": "yarn build; node test.js"
+  },
   "dependencies": {
-    "fbjs": "0.7.0",
-    "has-own-prop": "1.0.0",
-    "lodash.clone": "^3.0.3",
-    "react": "^0.14.6"
+    "react-reconciler": "^0.25.1"
   },
   "devDependencies": {
-    "imports-loader": "0.6.5"
+    "babel-eslint": "^10.1.0",
+    "bin-up": "^1.3.2",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-config-xo-space": "^0.25.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.1",
+    "microbundle": "^0.12.4",
+    "parcel": "^1.12.4",
+    "prettier": "^2.1.2",
+    "react": "next"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --config package.json --write",
+      "git add"
+    ],
+    "*.*": [
+      "prettier --config package.json --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "xo-space/esnext",
+      "react-app",
+      "prettier",
+      "prettier/react"
+    ],
+    "rules": {
+      "capitalized-comments": 0,
+      "new-cap": 0
+    }
+  },
+  "prettier": {
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
   }
 }
